@@ -1,14 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
-import useProtectedPage from '../../hooks/useProtectedPage'
-import useRequestDataAuth from '../../hooks/useRequestDataAuth'
-import decideCandidate from '../../functions/decideCandidate'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import { Container, Card, Titles, Description, Infos, Tag, InfosGroup, TitleCard, Approved, CardCandidates, Candidate, TitleCardCandidates, NameCandidate, InfosCandidate, InfoCandidate, ButtonGroup, Main } from '../../styles/page/private/TripDetailsPageStyles'
-import ButtonPattern from '../../components/ButtonPattern'
-import Loading from '../../components/Loading'
+import useProtectedPage from '../../../hooks/useProtectedPage'
+import useRequestDataAuth from '../../../hooks/useRequestDataAuth'
+import decideCandidate from '../../../utils/decideCandidate'
+import Header from '../../../components/Header'
+import Footer from '../../../components/Footer'
+import { Container, Card, Titles, Description, Infos, Tag, InfosGroup, TitleCard, Approved, CardCandidates, Candidate, TitleCardCandidates, NameCandidate, InfosCandidate, InfoCandidate, ButtonGroup, Main } from '../../../styles/page/private/TripDetailsPageStyles'
+import ButtonPattern from '../../../components/ButtonPattern'
+import Loading from '../../../components/Loading'
 
 
 function TripDetailsPage() {

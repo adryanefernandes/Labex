@@ -1,5 +1,5 @@
-import logoBlack from '../assents/logoBlack.png'
-import logoRed from '../assents/logoRed.png'
+import logoBlack from '../assets/logoBlack.png'
+import logoRed from '../assets/logoRed.png'
 import styled from 'styled-components'
 
 const LogoImg = styled.img`

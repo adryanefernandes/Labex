@@ -1,10 +1,10 @@
 import { Icon } from "@chakra-ui/react"
-import ButtonPattern from "../components/ButtonPattern"
-import { Message, Container } from '../styles/ErrorStyles'
+import ButtonPattern from "../../../components/ButtonPattern"
+import { Message, Container } from '../../../styles/ErrorStyles'
 import { useHistory } from 'react-router-dom'
 import { IoIosRocket } from 'react-icons/io'
 
-function Error() {
+function ErrorPage() {
   const history = useHistory()
   return <Container>
     <Icon as={IoIosRocket} h={100} w={100} />
@@ -17,4 +17,4 @@ function Error() {
   </Container>
 }
 
-export default Error
+export default ErrorPage

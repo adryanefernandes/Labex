@@ -1,9 +1,9 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Header from '../../components/Header'
-import { Main, Container, Tittle, Subtittle } from '../../styles/page/public/HomePageStyles'
-import ButtonSolid from '../../components/ButtonPattern'
-import Footer from '../../components/Footer'
+import Header from '../../../components/Header'
+import { Main, Container, Tittle, Subtittle } from '../../../styles/page/public/HomePageStyles'
+import ButtonSolid from '../../../components/ButtonPattern'
+import Footer from '../../../components/Footer'
 
 function HomePage() {
   const history = useHistory()
