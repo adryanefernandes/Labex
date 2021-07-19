@@ -8,10 +8,10 @@ import InputPattern from '../../../components/form/InputPattern'
 import SelectPattern from '../../../components/form/SelectPattern'
 import TextAreaPattern from '../../../components/form/TextAreaPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
-import { ButtonGroup, Container, Form, Image, ContainerForm, Phrase } from '../../../styles/page/private/CreateTripPageStyles'
 import Footer from '../../../components/Footer'
 import background from '../../../assets/backgroundCreateTrip.jpg'
 import { ButtonSend } from '../../../styles/component/ButtonSendStyles'
+import { ButtonGroup, Container, Form, Image, ContainerForm, Phrase } from './Styled'
 
 
 

@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../../hooks/useForm'
+import Footer from '../../../components/Footer'
 import Header from '../../../components/Header'
 import login from '../../../utils/login'
-import ImageBackground from '../../../assets/backgroundLogin.jpg'
 import { token } from '../../../apiConfig/axiosConfig'
-import { ButtonGroup, ContainerForm, Container, Image, Phrase, ContainerPhrase, Phrase2, Form } from '../../../styles/page/public/LoginPageStyles'
+
+import ImageBackground from '../../../assets/backgroundLogin.jpg'
 import InputPattern from '../../../components/form/InputPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
-import Footer from '../../../components/Footer'
 import { ButtonSend } from '../../../styles/component/ButtonSendStyles'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { IconButton, InputGroup, InputRightElement } from "@chakra-ui/react"
-import {Label} from '../../../styles/component/LabelStyles'
+import { Label } from '../../../styles/component/LabelStyles'
+import { ButtonGroup, ContainerForm, Container, Image, Phrase, ContainerPhrase, Phrase2, Form } from './Styled'
 
 function LoginPage() {
   const initialState = {
@@ -59,31 +60,31 @@ function LoginPage() {
             type={'email'}
             pattern={'[^@ \t\r\n]+@[^@ \t\r\n]+\\.[^@ \t\r\n]+'}
           />
-          
+
           <Label>Senha</Label>
           <InputGroup size="md">
-           <InputPattern
-            name={'password'}
-            placeholder={"******"}
-            value={form.password}
-            onChange={handleInput}
-            type={show ? "text" : "password"}
-          />
+            <InputPattern
+              name={'password'}
+              placeholder={"******"}
+              value={form.password}
+              onChange={handleInput}
+              type={show ? "text" : "password"}
+            />
             <InputRightElement >
-              
-            <IconButton
-            onClick={handleClick}
-            icon={show ? <ViewIcon /> : <ViewOffIcon />}
-            bg={"rgba(0, 0, 0, 0)"}
-            _active={{
-              bg: "",
-              transform: "",
-              borderColor: "",
-            }}
-            _focus={{
-              boxShadow:""
-            }}
-          />
+
+              <IconButton
+                onClick={handleClick}
+                icon={show ? <ViewIcon /> : <ViewOffIcon />}
+                bg={"rgba(0, 0, 0, 0)"}
+                _active={{
+                  bg: "",
+                  transform: "",
+                  borderColor: "",
+                }}
+                _focus={{
+                  boxShadow: ""
+                }}
+              />
             </InputRightElement>
           </InputGroup>
           <ButtonGroup>

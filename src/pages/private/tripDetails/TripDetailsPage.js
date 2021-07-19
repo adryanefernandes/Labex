@@ -6,9 +6,9 @@ import useRequestDataAuth from '../../../hooks/useRequestDataAuth'
 import decideCandidate from '../../../utils/decideCandidate'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
-import { Container, Card, Titles, Description, Infos, Tag, InfosGroup, TitleCard, Approved, CardCandidates, Candidate, TitleCardCandidates, NameCandidate, InfosCandidate, InfoCandidate, ButtonGroup, Main } from '../../../styles/page/private/TripDetailsPageStyles'
 import ButtonPattern from '../../../components/ButtonPattern'
 import Loading from '../../../components/Loading'
+import { Container, Card, Titles, Description, Infos, Tag, InfosGroup, TitleCard, Approved, CardCandidates, Candidate, TitleCardCandidates, NameCandidate, InfosCandidate, InfoCandidate, ButtonGroup, Main } from './Styled'
 
 
 function TripDetailsPage() {

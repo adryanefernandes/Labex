@@ -2,10 +2,11 @@ import React from 'react'
 import useRequestData from '../../../hooks/useRequestData'
 import { useHistory } from 'react-router-dom'
 import Header from '../../../components/Header'
-import { Message, ButtonGroup, MessageAndButton, ContainerCards, Card, Tittle, Description, ContainerInfos, Infos, TittleInfos, Container, ContainerDateDuraction } from '../../../styles/page/public/ListTripsPageStyles'
 import Footer from '../../../components/Footer'
-import ButtonPattern from '../../../components/ButtonPattern'
 import Loading from '../../../components/Loading'
+
+import ButtonPattern from '../../../components/ButtonPattern'
+import { Message, ButtonGroup, MessageAndButton, ContainerCards, Card, Tittle, Description, ContainerInfos, Infos, TittleInfos, Container, ContainerDateDuraction } from './Styled'
 
 function ListTripsPage() {
   const history = useHistory()

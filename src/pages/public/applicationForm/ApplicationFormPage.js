@@ -3,16 +3,16 @@ import useRequestData from '../../../hooks/useRequestData'
 import { useHistory } from 'react-router-dom'
 import applyToTrip from '../../../utils/applyToTrip'
 import useForm from '../../../hooks/useForm'
-
+import Footer from '../../../components/Footer'
 import Header from '../../../components/Header'
+
 import InputPattern from '../../../components/form/InputPattern'
 import TextAreaPattern from '../../../components/form/TextAreaPattern'
 import SelectPattern from '../../../components/form/SelectPattern'
 import background from '../../../assets/backgroundManInMoon.jpg'
-import { Form, ContainerForm, Container, Image, ButtonGroup, Phrase, Credit, ContainerPhrase } from '../../../styles/page/public/ApplicationFormPage'
 import ButtonPattern from '../../../components/ButtonPattern'
-import Footer from '../../../components/Footer'
 import { ButtonSend } from '../../../styles/component/ButtonSendStyles'
+import { Form, ContainerForm, Container, Image, ButtonGroup, Phrase, Credit, ContainerPhrase } from './Styled'
 
 
 function ApplicationFormPage() {
@@ -50,7 +50,7 @@ function ApplicationFormPage() {
   return (
     <Container>
       <ContainerForm>
-        <Header 
+        <Header
           colorLogo={'red'}
         />
         <Form onSubmit={submitForm}>
@@ -110,7 +110,7 @@ function ApplicationFormPage() {
           />
 
           <ButtonGroup>
-          <ButtonSend>Enviar</ButtonSend>
+            <ButtonSend>Enviar</ButtonSend>
             <ButtonPattern
               onClick={() => history.push('/trips/list')}
               name={'Voltar'}
