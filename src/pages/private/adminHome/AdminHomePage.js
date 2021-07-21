@@ -4,7 +4,7 @@ import Header from '../../../components/Header/Header'
 import useProtectedPage from '../../../hooks/useProtectedPage'
 import deleteTrip from '../../../requests/deleteTrip'
 import useRequestDataAuth from '../../../hooks/useRequestDataAuth'
-import Footer from '../../../components/Footer'
+import Footer from '../../../components/footer/Footer'
 import { logout } from '../../../utils/logout'
 
 import ButtonPattern from '../../../components/ButtonPattern'

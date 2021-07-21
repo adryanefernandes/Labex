@@ -2,7 +2,7 @@ import React from 'react'
 import useRequestData from '../../../hooks/useRequestData'
 import { useHistory } from 'react-router-dom'
 import Header from '../../../components/Header/Header'
-import Footer from '../../../components/Footer'
+import Footer from '../../../components/footer/Footer'
 import Loading from '../../../components/Loading'
 
 import ButtonPattern from '../../../components/ButtonPattern'

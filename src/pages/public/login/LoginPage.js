@@ -1,4 +1,4 @@
-import Footer from '../../../components/Footer'
+import Footer from '../../../components/footer/Footer'
 import { useUnprotectePage } from '../../../hooks/useUnprotectedPage'
 import LoginForm from './LoginForm'
 
