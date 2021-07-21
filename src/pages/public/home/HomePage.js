@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Header from '../../../components/Header'
+import Header from '../../../components/Header/Header'
 import ButtonPattern from '../../../components/ButtonPattern'
 import Footer from '../../../components/Footer'
 import { Main, Container, Tittle, Subtittle } from './Styled'

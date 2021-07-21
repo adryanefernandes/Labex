@@ -1,6 +1,6 @@
 import React from 'react'
 import useProtectedPage from '../../../hooks/useProtectedPage'
-import Header from '../../../components/Header'
+import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer'
 import background from '../../../assets/backgroundCreateTrip.jpg'
 import {  Container, Image, ContainerForm, Phrase } from './Styled'

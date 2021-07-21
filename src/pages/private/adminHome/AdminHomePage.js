@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Header from '../../../components/Header'
+import Header from '../../../components/Header/Header'
 import useProtectedPage from '../../../hooks/useProtectedPage'
 import deleteTrip from '../../../requests/deleteTrip'
 import useRequestDataAuth from '../../../hooks/useRequestDataAuth'

@@ -8,11 +8,19 @@ export const Container = styled.header`
   align-items: center;
 
   grid-column: 1 / -1;
+
+  @media screen and (max-device-width: 420px){
+    flex-direction: column;
+  }
 `
 
 export const ContainerButton = styled.div`
-  align-self: flex-end;
   position: fixed;
   right: 1rem;
   top: 2rem;
+
+  @media screen and (max-device-width: 420px){
+    right: .2rem;
+    top: .5rem;
+  }
 `

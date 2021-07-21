@@ -1,7 +1,7 @@
 import React from 'react'
 import useRequestData from '../../../hooks/useRequestData'
 import { useHistory } from 'react-router-dom'
-import Header from '../../../components/Header'
+import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer'
 import Loading from '../../../components/Loading'
 

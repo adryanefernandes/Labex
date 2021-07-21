@@ -1,8 +1,8 @@
-import Logo from './Logo'
+import Logo from '../Logo'
 import { useHistory } from 'react-router-dom'
-import ButtonPattern from './ButtonPattern'
-import { Container, ContainerButton } from '../styles/component/HeaderStyles'
-import { goToAdminHome } from '../routes/coordinator'
+import ButtonPattern from '../ButtonPattern'
+import { Container, ContainerButton } from './Styled'
+import { goToAdminHome } from '../../routes/coordinator'
 
 function Header(props) {
   const history = useHistory()
