@@ -5,7 +5,6 @@ import InputPattern from '../../../components/form/InputPattern'
 import SelectPattern from '../../../components/form/SelectPattern'
 import TextAreaPattern from '../../../components/form/TextAreaPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
-import { ButtonSend } from '../../../styles/component/ButtonSendStyles'
 import { ButtonGroup, Form } from './Styled'
 import { currentDate } from '../../../utils/currentDate'
 
@@ -82,7 +81,12 @@ function CreateTripForm() {
         type={'number'}
       />
       <ButtonGroup>
-        <ButtonSend>Criar</ButtonSend>
+        <button
+          type='submit'
+          id="sendButton"
+        >
+          Criar
+        </button>
 
         <ButtonPattern
           onClick={() => history.push('/admin/trips/list')}

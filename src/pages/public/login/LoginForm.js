@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../../hooks/useForm'
 import login from '../../../requests/login'
