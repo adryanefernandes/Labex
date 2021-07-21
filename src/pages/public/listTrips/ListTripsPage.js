@@ -6,7 +6,7 @@ import Footer from '../../../components/footer/Footer'
 import Loading from '../../../components/Loading'
 
 import ButtonPattern from '../../../components/ButtonPattern'
-import { Message, ButtonGroup, MessageAndButton, ContainerCards, Card, Tittle, Description, ContainerInfos, Infos, TittleInfos, Container, ContainerDateDuraction } from './Styled'
+import { ButtonGroup, MessageAndButton, ContainerCards, Card, CardBody, Container } from './Styled'
 import { tripCreationDate } from '../../../utils/tripCreationDate'
 import { goToApplication, goToHome } from '../../../routes/coordinator'
 
@@ -21,28 +21,23 @@ function ListTripsPage() {
       const dateTrip = tripCreationDate(trip.date)
       return (
         <Card>
-          <ContainerInfos>
-            <Tittle>{trip.name}</Tittle>
-            <ContainerDateDuraction>
-              <Infos>
-                <TittleInfos>Data:</TittleInfos>
+            <h3>{trip.name}</h3>
+            <h4>{trip.description}</h4>
+
+          <CardBody>
+              <div>
+                <p>Data:</p>
                 {dateTrip}
-              </Infos>
-              <Infos>
-                <TittleInfos>Duração:</TittleInfos>
+              </div>
+              <div>
+                <p>Duração:</p>
                 {trip.durationInDays} dias
-              </Infos>
-              <Infos>
-                <TittleInfos>Planeta:</TittleInfos>
+              </div>
+              <div>
+                <p>Planeta:</p>
                 {trip.planet}
-              </Infos>
-            </ContainerDateDuraction>
-          </ContainerInfos>
-
-          <div>
-            <Description>{trip.description}</Description>
-          </div>
-
+              </div>
+          </CardBody>
         </Card>
       )
     })
@@ -51,24 +46,29 @@ function ListTripsPage() {
       <Header
         colorLogo={'red'}
       />
-      <MessageAndButton>
-        <Message>Bem-vindo(a), viajante!</Message>
-        <ButtonGroup>
-          <ButtonPattern
-            onClick={() => goToHome(history)}
-            name={'Voltar'}
-            color={'black'}
-            variant={'ghost'}
-          />
-          <ButtonPattern
-            onClick={() => goToApplication(history)}
-            name={'Inscrever-se'}
-          />
-        </ButtonGroup>
-      </MessageAndButton>
-      <ContainerCards>
-        {orderlyTrips ? orderlyTrips : <Loading />}
-      </ContainerCards>
+
+      <main>
+        <MessageAndButton>
+          <h2>Bem-vindo(a), viajante!</h2>
+          <ButtonGroup>
+            <ButtonPattern
+              onClick={() => goToHome(history)}
+              name={'Voltar'}
+              color={'black'}
+              variant={'ghost'}
+            />
+            <ButtonPattern
+              onClick={() => goToApplication(history)}
+              name={'Inscrever-se'}
+            />
+          </ButtonGroup>
+        </MessageAndButton>
+        
+        <ContainerCards>
+          {orderlyTrips ? orderlyTrips : <Loading />}
+        </ContainerCards>
+      </main>
+
       <Footer />
     </Container >
   )

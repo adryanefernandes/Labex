@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const Container = styled.main `
-  height: 100vh;
+export const Container = styled.main`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `
@@ -10,17 +10,31 @@ export const MessageAndButton = styled.section`
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  margin: 0 5rem;
-`
-export const Message = styled.p`
-  color: #FEAE33;
-  font-size: 2rem;
-  font-weight: 800;
+  width: 100%;
+
+  @media screen and (max-device-width: 820px){
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h2{
+    color: #FEAE33;
+    font-size: 2rem;
+    font-weight: 800;
+
+    @media screen and (max-device-width: 820px){
+      font-size: 1.8rem;
+    }
+  }
 `
 
 export const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-device-width: 820px){
+    padding-top: 1.5rem;
+  }
 `
 
 export const ContainerCards = styled.section`
@@ -30,49 +44,66 @@ export const ContainerCards = styled.section`
   gap: 1rem;
   margin-top: 1rem;
 `
+
 export const Card = styled.div`
   padding: 1rem 2rem;
   background: rgba(200,200,180, .5);
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
-  overflow-y: auto;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 2rem;
-  min-width: 20rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 3rem;
+
+  @media screen and (max-device-width: 820px){
+    grid-template-rows: 1fr 4rem 5rem;
+    grid-template-columns: 1fr;
+  }
+  
+  h3{
+    color: #DD6847;
+    font-size: 2rem;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-device-width: 820px){
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  h4{
+    text-align: justify;
+    color: #333;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+
+    overflow-y: auto;
+
+    @media screen and (max-device-width: 820px){
+      grid-row: 3 / 4;
+    }
+  }
 `
 
-export const Tittle = styled.p`
-  color: #DD6847;
-  font-size: 2rem;
-  font-weight: 700;
-`
+export const CardBody = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  @media screen and (max-device-width: 820px){
+    grid-row: 2 / 3;
+  }
 
-export const Description = styled.p`
-  text-align: justify;
-  color: #333;
-`
+  div {
+    text-align: center;
+    margin:.5rem;
 
-export const ContainerInfos = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5rem 0;
-`
-
-export const ContainerDateDuraction = styled.div `
-  display: flex;
-  width: 45%;
-  justify-content: space-between;
-`
-
-export const Infos = styled.div`
-  text-align: center;
-  margin:.5rem;
-`
-export const TittleInfos = styled.p`
-  color:#DD6847;
-  font-size: .8rem;
+    p{
+     color:#DD6847;
+     font-size: .8rem; 
+    }
+  }
 `
