@@ -1,7 +1,8 @@
 import Logo from './Logo'
 import { useHistory } from 'react-router-dom'
 import ButtonPattern from './ButtonPattern'
-import {Container, ContainerButton} from '../styles/component/HeaderStyles'
+import { Container, ContainerButton } from '../styles/component/HeaderStyles'
+import { goToAdminHome } from '../routes/coordinator'
 
 function Header(props) {
   const history = useHistory()
@@ -14,7 +15,7 @@ function Header(props) {
       {props.isHome &&
         <ContainerButton>
           <ButtonPattern
-            onClick={() => history.push('/admin/trips/list')}
+            onClick={() => goToAdminHome(history)}
             variant={'ghost'}
             name={'Administrador'}
             colorHover={'rgba(255, 255, 255, .2)'}

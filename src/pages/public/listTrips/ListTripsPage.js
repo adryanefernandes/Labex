@@ -7,6 +7,8 @@ import Loading from '../../../components/Loading'
 
 import ButtonPattern from '../../../components/ButtonPattern'
 import { Message, ButtonGroup, MessageAndButton, ContainerCards, Card, Tittle, Description, ContainerInfos, Infos, TittleInfos, Container, ContainerDateDuraction } from './Styled'
+import { tripCreationDate } from '../../../utils/tripCreationDate'
+import { goToApplication, goToHome } from '../../../routes/coordinator'
 
 function ListTripsPage() {
   const history = useHistory()
@@ -16,10 +18,7 @@ function ListTripsPage() {
   const orderlyTrips = tripsList.trips && tripsList.trips.map(
     (trip) => {
 
-      let dateNow = trip.date
-      const yearNow = dateNow.substring(0, 4)
-      const monthNow = dateNow.substring(5, 7)
-      const dayNow = dateNow.substring(8)
+      const dateTrip = tripCreationDate(trip.date)
       return (
         <Card>
           <ContainerInfos>
@@ -27,7 +26,7 @@ function ListTripsPage() {
             <ContainerDateDuraction>
               <Infos>
                 <TittleInfos>Data:</TittleInfos>
-                {dayNow}/{monthNow}/{yearNow}
+                {dateTrip}
               </Infos>
               <Infos>
                 <TittleInfos>Duração:</TittleInfos>
@@ -49,20 +48,20 @@ function ListTripsPage() {
     })
   return (
     <Container>
-      <Header 
+      <Header
         colorLogo={'red'}
       />
       <MessageAndButton>
         <Message>Bem-vindo(a), viajante!</Message>
         <ButtonGroup>
           <ButtonPattern
-            onClick={() => history.push('/')}
+            onClick={() => goToHome(history)}
             name={'Voltar'}
             color={'black'}
             variant={'ghost'}
           />
           <ButtonPattern
-            onClick={() => history.push('/trips/application')}
+            onClick={() => goToApplication(history)}
             name={'Inscrever-se'}
           />
         </ButtonGroup>

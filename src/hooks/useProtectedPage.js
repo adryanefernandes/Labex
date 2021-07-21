@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 
 function useProtectedPage() {
   const history = useHistory()
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const token = window.localStorage.getItem('token')
 
     if(!token){

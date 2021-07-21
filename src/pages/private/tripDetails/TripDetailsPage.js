@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import useProtectedPage from '../../../hooks/useProtectedPage'
 import useRequestDataAuth from '../../../hooks/useRequestDataAuth'
-import decideCandidate from '../../../utils/decideCandidate'
+import decideCandidate from '../../../requests/decideCandidate'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import ButtonPattern from '../../../components/ButtonPattern'
@@ -17,8 +17,6 @@ function TripDetailsPage() {
   const history = useHistory()
   const params = useParams()
   const tripDetails = useRequestDataAuth(`/trip/${params.id}`, {})
-
-  console.log(tripDetails.trip)
 
   const decision = (result, candidateId) => {
     const body = {

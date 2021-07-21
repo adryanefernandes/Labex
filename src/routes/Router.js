@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import HomePage from '../pages/public/home/HomePage'
 import ListTripsPage from '../pages/public/listTrips/ListTripsPage'
-import ApplicationFormPage from '../pages/public/applicationForm/ApplicationFormPage'
+import ApplicationFormPage from '../pages/public/application/ApplicationPage'
 import LoginPage from '../pages/public/login/LoginPage'
 import ErrorPage from '../pages/public/error/ErrorPage'
 
