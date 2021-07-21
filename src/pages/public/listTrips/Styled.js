@@ -4,6 +4,16 @@ export const Container = styled.main`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  main{
+    @media screen and (max-device-width: 1100px){
+      margin: 0 1rem;
+    }
+
+    @media screen and (min-device-width: 1101px){
+      margin: 0 5rem;
+    }
+  }
 `
 export const MessageAndButton = styled.section`
   display: flex;
@@ -39,14 +49,15 @@ export const ButtonGroup = styled.div`
 
 export const ContainerCards = styled.section`
   display: grid;
-  grid-template-rows: repeat(min(6), 1fr);
+  grid-template-rows: repeat(min(1), 1fr);
+  min-height: 85vh;
 
   gap: 1rem;
   margin-top: 1rem;
 `
 
 export const Card = styled.div`
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   background: rgba(200,200,180, .5);
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);

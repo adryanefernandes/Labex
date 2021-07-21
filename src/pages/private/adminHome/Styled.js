@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-
-`
 export const Main = styled.div`
   padding: 1rem;
+  min-height: 80vh;
 
+  @media screen and (min-device-width: 1100px){
+    margin: 0 5rem;
+  }
 `
 const EveryButtonGroup = styled.section`
   display: flex;
@@ -16,13 +17,12 @@ const EveryButtonGroup = styled.section`
 export const ButtonGroup = styled(EveryButtonGroup)`
   padding: 1rem 0;
 `
-
 export const ButtonGroupRight = styled(EveryButtonGroup)`
 `
 
 export const TripsList = styled.section `
   display: grid;
-  grid-template-rows: repeat(min(8), 1fr);
+  grid-template-rows: repeat(min(1), 1fr);
 
   gap: 1rem;
 `
@@ -35,10 +35,10 @@ export const Trip = styled.div`
   align-items: center;
   justify-content: space-between;
   box-shadow: 1px 1px 4px gray;
-`
 
-export const TripName = styled.p `
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
+  p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;  
+  }
 `

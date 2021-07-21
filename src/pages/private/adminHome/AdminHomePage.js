@@ -11,7 +11,7 @@ import ButtonPattern from '../../../components/ButtonPattern'
 import Loading from '../../../components/Loading'
 import { IconButton } from "@chakra-ui/react"
 import { DeleteIcon } from '@chakra-ui/icons'
-import { Container, Main, ButtonGroup, ButtonGroupRight, TripsList, Trip, TripName } from './Styled'
+import { Main, ButtonGroup, ButtonGroupRight, TripsList, Trip } from './Styled'
 import { goToCreateTrip, goToHome, goToTripDatailsPage } from '../../../routes/coordinator'
 
 
@@ -24,7 +24,7 @@ function AdminHomePage() {
   const tripsOrder = tripsList.trips && tripsList.trips.map((trip) => {
     return (
       <Trip key={trip.id} >
-        <TripName onClick={() => goToTripDatailsPage(history, trip.id)}>{trip.name}</TripName>
+        <p onClick={() => goToTripDatailsPage(history, trip.id)}>{trip.name}</p>
 
         <IconButton
           onClick={() => deleteTrip(trip.id)}
@@ -35,10 +35,11 @@ function AdminHomePage() {
 
 
   return (
-    <Container>
+    <>
       <Header
         colorLogo={'red'}
       />
+
       <Main>
         <ButtonGroup>
           <ButtonPattern
@@ -59,15 +60,16 @@ function AdminHomePage() {
             />
           </ButtonGroupRight>
         </ButtonGroup>
+
         <TripsList>
           {tripsOrder ? tripsOrder : <Loading />}
         </TripsList>
       </Main>
+
       <Footer />
-    </Container>
+    </>
 
   )
-
 }
 
 export default AdminHomePage
