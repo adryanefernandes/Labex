@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import Header from '../../../components/Header/Header'
 import ButtonPattern from '../../../components/ButtonPattern'
 import Footer from '../../../components/footer/Footer'
-import { Main, Container, Tittle, Subtittle } from './Styled'
+import { Main, Container, Tittle } from './Styled'
 
 function HomePage() {
   const history = useHistory()
@@ -15,10 +15,9 @@ function HomePage() {
       />
       <Main>
         <Tittle>Um universo de possibilidades</Tittle>
-        <Subtittle>viagens espaciais a menos de um ano-luz de distância</Subtittle>
         <ButtonPattern
           onClick={() => history.push('/trips/list')}
-          name={'Veja as viagens disponíveis'}
+          name={'Viagens espaciais disponíveis'}
           bg={'brand.darkRed'}
           margin={'1rem'}
           colorHover={'rgb(255, 80, 100)'}

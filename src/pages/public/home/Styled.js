@@ -30,19 +30,3 @@ export const Tittle = styled.h1 `
     font-size: 3rem;
   }
 `
-export const Subtittle = styled.h3 `
-  font-size: 2.3rem;
-  margin-top: -1.8rem;
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
-
-  @media screen and (max-device-width: 720px){
-    display: none;
-  }
-
-  @media screen and (min-device-width: 721px) and (max-device-width: 960px){
-    margin-top: -1rem;
-    font-size: 1.7rem;
-  }
-`
