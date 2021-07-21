@@ -6,9 +6,11 @@ import useRequestDataAuth from '../../../hooks/useRequestDataAuth'
 import decideCandidate from '../../../requests/decideCandidate'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/footer/Footer'
+import { tripCreationDate } from '../../../utils/tripCreationDate'
+
 import ButtonPattern from '../../../components/ButtonPattern'
 import Loading from '../../../components/Loading'
-import { Container, Card, Titles, Description, Infos, Tag, InfosGroup, TitleCard, Approved, CardCandidates, Candidate, TitleCardCandidates, NameCandidate, InfosCandidate, InfoCandidate, ButtonGroup, Main } from './Styled'
+import { Container, CardApproved, InfosGroup, CardCandidates, Candidate, ButtonGroup, CardTrip } from './Styled'
 
 
 function TripDetailsPage() {
@@ -29,19 +31,23 @@ function TripDetailsPage() {
   const candidates = tripDetails.trip && tripDetails.trip.candidates.map((candidate) => {
     return (
       <Candidate key={candidate.id}>
-        <NameCandidate>{candidate.name}</NameCandidate>
-        <InfosCandidate>
-          <Tag>Idade</Tag><InfoCandidate>{candidate.age}</InfoCandidate>
-        </InfosCandidate>
-        <InfosCandidate>
-          <Tag>Profissão</Tag><InfoCandidate>{candidate.profession}</InfoCandidate>
-        </InfosCandidate>
-        <InfosCandidate>
-          <Tag>País</Tag><InfoCandidate>{candidate.country}</InfoCandidate>
-        </InfosCandidate>
-        <InfosCandidate>
-          <Tag>Motivo</Tag><InfoCandidate>{candidate.applicationText}</InfoCandidate>
-        </InfosCandidate>
+        <h1>{candidate.name}</h1>
+        <div>
+          <span className='Tag'>Idade</span>
+          <span className='Contents'>{candidate.age}</span>
+        </div>
+        <div>
+          <span className='Tag'>Profissão</span>
+          <span className='Contents'>{candidate.profession}</span>
+        </div>
+        <div>
+          <span className='Tag'>País</span>
+          <span className='Contents'>{candidate.country}</span>
+        </div>
+        <div>
+          <span className='Tag'>Motivo</span>
+          <span className='Contents'>{candidate.applicationText}</span>
+        </div>
 
         <ButtonGroup>
           <ButtonPattern
@@ -60,57 +66,49 @@ function TripDetailsPage() {
   })
 
   const approved = tripDetails.trip && tripDetails.trip.approved.map((candidate) => {
-    return <Approved>{candidate.name}</Approved>
+    return <p>{candidate.name}</p>
   })
-
-  const date = () => {
-    let dateNow = tripDetails.trip && tripDetails.trip.date
-    const yearNow = dateNow.substring(0, 4)
-    const monthNow = dateNow.substring(5, 7)
-    const dayNow = dateNow.substring(8)
-
-    const newDate =  dayNow + '/' +  monthNow + '/' +  yearNow
-    return newDate
-  }
-
 
   return (
     <Container>
       <Header colorLogo={'red'} />
       {tripDetails.trip && tripDetails.trip.name ?
-        <Main>
-          <Card>
-            <Titles>{tripDetails.trip && tripDetails.trip.name}</Titles>
-            <Description>{tripDetails.trip && tripDetails.trip.description}</Description>
+        <main>
+          <CardTrip>
+            <p>{tripDetails.trip && tripDetails.trip.name}</p>
+            <span id="description">{tripDetails.trip && tripDetails.trip.description}</span>
             <InfosGroup>
-              <Infos>
-                <Tag>Data</Tag>
-                {date()}
-              </Infos>
-              <Infos>
-                <Tag>Dias</Tag>
+              <div>
+                <span>Data</span>
+                {tripCreationDate(tripDetails.trip && tripDetails.trip.date)}
+              </div>
+              <div>
+                <span>Dias</span>
                 {tripDetails.trip && tripDetails.trip.durationInDays} dias
-         </Infos>
-              <Infos>
-                <Tag>Planeta</Tag>
+              </div>
+              <div>
+                <span>Planeta</span>
                 {tripDetails.trip && tripDetails.trip.planet}
-              </Infos>
+              </div>
             </InfosGroup>
+
             <ButtonPattern
               onClick={() => history.push('/admin/trips/list')}
               name={'Voltar'}
               margin={'1rem'}
             />
-          </Card>
-          <Card>
-            <TitleCard>Aprovados</TitleCard>
+          </CardTrip>
+
+          <CardApproved>
+            <h3>Aprovados</h3>
             {approved}
-          </Card>
+          </CardApproved>
+
           <CardCandidates>
-            <TitleCardCandidates>Candidatos</TitleCardCandidates>
+            <h3>Candidatos</h3>
             {candidates}
           </CardCandidates>
-        </Main>
+        </main>
         :
         <Loading />}
 

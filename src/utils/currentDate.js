@@ -1,4 +1,4 @@
-export function currentDate() {
+export function currentDate(type) {
   let dateNow = new Date().toLocaleDateString()
   const yearNow = dateNow.substring(6)
   const monthNow = dateNow.substring(3, 5)

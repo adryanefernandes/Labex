@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../../hooks/useForm'
 import login from '../../../requests/login'
-import { token } from '../../../apiConfig/axiosConfig'
-
 
 import InputPattern from '../../../components/form/InputPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
