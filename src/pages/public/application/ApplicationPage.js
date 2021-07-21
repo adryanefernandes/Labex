@@ -6,7 +6,7 @@ import ApplicationForm from './ApplicationForm'
 
 import background from '../../../assets/backgroundManInMoon.jpg'
 
-import { ContainerForm, Container, Image, Phrase, Credit, ContainerPhrase } from './Styled'
+import { ContainerForm, Container, Image } from './Styled'
 
 
 function ApplicationPage() {
@@ -20,11 +20,12 @@ function ApplicationPage() {
         <ApplicationForm />
         <Footer />
       </ContainerForm>
+
       <Image img={background}>
-        <ContainerPhrase>
-          <Phrase>"Um pequeno passo para o homem, um grande salto para a humanidade."</Phrase>
-          <Credit>-Neil Armstrong</Credit>
-        </ContainerPhrase>
+        <div>
+          <h3 id="sitation">"Um pequeno passo para o homem, um grande salto para a humanidade."</h3>
+          <p id="credit">-Neil Armstrong</p>
+        </div>
       </Image>
     </Container>
   )

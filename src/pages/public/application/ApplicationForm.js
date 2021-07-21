@@ -7,7 +7,6 @@ import InputPattern from '../../../components/form/InputPattern'
 import TextAreaPattern from '../../../components/form/TextAreaPattern'
 import SelectPattern from '../../../components/form/SelectPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
-import { ButtonSend } from '../../../styles/component/ButtonSendStyles'
 import { Form, ButtonGroup } from './Styled'
 
 function ApplicationForm() {
@@ -94,7 +93,7 @@ function ApplicationForm() {
       />
 
       <ButtonGroup>
-        <ButtonSend>Enviar</ButtonSend>
+        <button id="sendButton">Enviar</button>
         <ButtonPattern
           onClick={() => history.push('/trips/list')}
           name={'Voltar'}
