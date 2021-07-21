@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 import useForm from '../../../hooks/useForm'
 import login from '../../../requests/login'
 import { token } from '../../../apiConfig/axiosConfig'
-import Header from '../../../components/Header/Header'
 
 
 import InputPattern from '../../../components/form/InputPattern'
@@ -33,7 +32,6 @@ function LoginPage() {
 
   return (
     <Form onSubmit={handleSubmit}>
-        <Header colorLogo={'red'} />
 
       <InputPattern
         label={'Email'}

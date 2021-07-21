@@ -1,9 +1,10 @@
 import Footer from '../../../components/footer/Footer'
 import { useUnprotectePage } from '../../../hooks/useUnprotectedPage'
 import LoginForm from './LoginForm'
+import Header from '../../../components/Header/Header'
 
 import ImageBackground from '../../../assets/backgroundLogin.jpg'
-import { ContainerForm, Container, Image, Phrase, ContainerPhrase, Phrase2 } from './Styled'
+import { ContainerForm, Container, Image } from './Styled'
 
 function LoginPage() {
   useUnprotectePage()
@@ -11,15 +12,20 @@ function LoginPage() {
   return (
     <Container>
       <ContainerForm>
-        <LoginForm />
+        <div id="formCenter">
+          <Header colorLogo={'red'} />
+          <LoginForm />
+        </div>
+
 
         <Footer />
       </ContainerForm>
 
-      <ContainerPhrase>
-        <Phrase>Bem-vindo(a), <Phrase2>comandante!</Phrase2></Phrase>
-      </ContainerPhrase>
-      <Image src={ImageBackground} alt='imagem com astronauta e et se olhando' />
+      <Image img={ImageBackground}>
+        <div>
+          <p>Bem-vindo(a), <span>comandante!</span></p>
+        </div>
+      </Image>
     </Container >
 
   )
