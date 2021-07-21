@@ -6,8 +6,6 @@ import background from '../../../assets/backgroundCreateTrip.jpg'
 import {  Container, Image, ContainerForm, Phrase } from './Styled'
 import CreateTripForm from './CreateTripForm'
 
-
-
 function CreateTripPage() {
   useProtectedPage()
 
