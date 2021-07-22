@@ -4,7 +4,7 @@ export const Main = styled.div`
   padding: 1rem;
   min-height: 80vh;
 
-  @media screen and (min-device-width: 1100px){
+  @media screen and (min-width: 1100px){
     margin: 0 5rem;
   }
 `

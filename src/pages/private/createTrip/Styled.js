@@ -11,7 +11,7 @@ export const ContainerForm = styled.div`
   height: 100%;
   width: 70%;
 
-  @media screen and (max-device-width: 700px){
+  @media screen and (max-width: 700px){
     width: 100vw;
   }
 `
@@ -23,7 +23,7 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     padding: 2rem 2rem;
   }
 `
@@ -57,7 +57,7 @@ export const Image = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-device-width: 700px){
+  @media screen and (max-width: 700px){
     display: none;
   }
 
@@ -69,7 +69,7 @@ export const Image = styled.div`
     text-shadow: 1px 1px 5px black;
     padding: 1rem;
 
-    @media screen and (min-device-width: 700px)  and (max-device-width: 1100px){
+    @media screen and (min-width: 700px)  and (max-width: 1100px){
       font-size: 1.8rem;
     }
   }

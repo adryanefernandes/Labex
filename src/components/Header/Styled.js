@@ -9,7 +9,7 @@ export const Container = styled.header`
 
   grid-column: 1 / -1;
 
-  @media screen and (max-device-width: 420px){
+  @media screen and (max-width: 420px){
     flex-direction: column;
   }
 `
@@ -19,7 +19,7 @@ export const ContainerButton = styled.div`
   right: 1rem;
   top: 2rem;
 
-  @media screen and (max-device-width: 420px){
+  @media screen and (max-width: 420px){
     right: .2rem;
     top: .5rem;
   }

@@ -19,8 +19,9 @@ function ListTripsPage() {
     (trip) => {
 
       const dateTrip = tripCreationDate(trip.date)
+
       return (
-        <Card>
+        <Card key ={trip.id}>
             <h3>{trip.name}</h3>
             <h4>{trip.description}</h4>
 

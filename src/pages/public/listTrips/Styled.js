@@ -6,11 +6,11 @@ export const Container = styled.main`
   flex-direction: column;
 
   main{
-    @media screen and (max-device-width: 1100px){
+    @media screen and (max-width: 1100px){
       margin: 0 1rem;
     }
 
-    @media screen and (min-device-width: 1101px){
+    @media screen and (min-width: 1101px){
       margin: 0 5rem;
     }
   }
@@ -22,7 +22,7 @@ export const MessageAndButton = styled.section`
   padding: 1rem;
   width: 100%;
 
-  @media screen and (max-device-width: 820px){
+  @media screen and (max-width: 820px){
     flex-direction: column;
     text-align: center;
   }
@@ -32,7 +32,7 @@ export const MessageAndButton = styled.section`
     font-size: 2rem;
     font-weight: 800;
 
-    @media screen and (max-device-width: 820px){
+    @media screen and (max-width: 820px){
       font-size: 1.8rem;
     }
   }
@@ -42,7 +42,7 @@ export const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (max-device-width: 820px){
+  @media screen and (max-width: 820px){
     padding-top: 1.5rem;
   }
 `
@@ -66,7 +66,7 @@ export const Card = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 3rem;
 
-  @media screen and (max-device-width: 820px){
+  @media screen and (max-width: 820px){
     grid-template-rows: 1fr 4rem 5rem;
     grid-template-columns: 1fr;
   }
@@ -79,7 +79,7 @@ export const Card = styled.div`
     display: flex;
     align-items: center;
 
-    @media screen and (max-device-width: 820px){
+    @media screen and (max-width: 820px){
       justify-content: center;
       text-align: center;
     }
@@ -94,7 +94,7 @@ export const Card = styled.div`
 
     overflow-y: auto;
 
-    @media screen and (max-device-width: 820px){
+    @media screen and (max-width: 820px){
       grid-row: 3 / 4;
     }
   }
@@ -104,7 +104,7 @@ export const CardBody = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   
-  @media screen and (max-device-width: 820px){
+  @media screen and (max-width: 820px){
     grid-row: 2 / 3;
   }
 

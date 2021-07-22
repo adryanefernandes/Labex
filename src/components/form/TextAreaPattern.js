@@ -10,7 +10,7 @@ function TextAreaPattern(props) {
       placeholder={props.placeholder}
       value={props.value}
       onChange={props.onChange}
-      minlength={props.minlength}
+      minLength={props.minLength}
       title={props.title}
 
       // borderColor={'brand.orange'}

@@ -24,7 +24,7 @@ function ApplicationForm() {
   const tripsList = useRequestData('/trips', {})
 
   const selectTrips = tripsList.trips && tripsList.trips.map((trip) => {
-    return <option value={trip.id}>{trip.name}</option>
+    return <option value={trip.id} key={trip.id}>{trip.name}</option>
   })
 
   const submitForm = (event) => {

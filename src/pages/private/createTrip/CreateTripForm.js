@@ -29,7 +29,7 @@ function CreateTripForm() {
 
   const planets = ['Mercúrio', 'Vênus', 'Terra', 'Marte', 'Júpiter', 'Saturno', 'Urano', 'Netuno']
   const optionsSelect = planets.map((item) => {
-    return <option value={item}>{item}</option>
+    return <option value={item} key={item}>{item}</option>
   })
 
   return (

@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const ContainerForm = styled.section`
   width: 80%;
 
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     width: 100vw;
   }
 `
@@ -19,7 +19,7 @@ export const Form = styled.form`
 
   justify-content: center;
 
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     padding: 2rem 2rem;
   }
 `
@@ -57,11 +57,11 @@ export const Image = styled.section`
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     display: none;
   }
 
-  @media screen and (min-device-width: 601px) and (max-device-width: 900px){
+  @media screen and (min-width: 601px) and (max-width: 900px){
     width: 60%;
   }
 
@@ -75,7 +75,7 @@ export const Image = styled.section`
       font-size: 2.5rem;
       text-align: center;
 
-      @media screen and (min-device-width: 600px)  and (max-device-width: 1100px){
+      @media screen and (min-width: 600px)  and (max-width: 1100px){
         font-size: 1.8rem;
       }
     }

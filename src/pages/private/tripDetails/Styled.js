@@ -12,11 +12,11 @@ export const Container = styled.div`
 
     margin: 0 5rem;
 
-    @media screen and (max-device-width: 780px){
+    @media screen and (max-width: 780px){
       margin: 0 1rem;
     }
 
-    @media screen and (max-device-width: 960px){
+    @media screen and (max-width: 960px){
       display: flex;
       flex-direction: column;
     }
@@ -30,6 +30,12 @@ const Card = styled.div`
   border-radius: 10px;
   text-align: center;
   overflow-y: auto;
+
+  
+  .EmptyList{
+    color: gray;
+    margin: .5rem;
+  }
 `
 
 export const CardTrip = styled(Card)`
@@ -71,11 +77,12 @@ export const CardApproved = styled(Card)`
     font-size: 1.5rem;
   }
 
-  p{
+  #candidateName{
     text-align: left; 
     padding: .5rem;
     border-bottom: 1px solid gray;
   }
+
 `
 
 export const CardCandidates = styled(Card)`
@@ -87,7 +94,7 @@ export const CardCandidates = styled(Card)`
 
   overflow-y: auto;
 
-  @media screen and (max-device-width: 780px){
+  @media screen and (max-width: 780px){
     grid-template-columns: 1fr;
   }
 

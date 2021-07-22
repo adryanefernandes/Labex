@@ -10,7 +10,7 @@ export const ContainerForm = styled.div`
   box-shadow: 1px 1px 10px black;
   background: white;
 
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     width: 100vw;
   }
   
@@ -27,7 +27,7 @@ export const Form = styled.form`
   padding: 2rem;
   margin: 0 1rem;
 
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     padding: 2rem 2rem;
   }
 `
@@ -46,11 +46,11 @@ export const Image = styled.div`
   width: 100%;
   height: 100vh;
   
-  @media screen and (max-device-width: 600px){
+  @media screen and (max-width: 600px){
     display: none;
   }
 
-  @media screen and (min-device-width: 601px) and (max-device-width: 900px){
+  @media screen and (min-width: 601px) and (max-width: 900px){
     width: 50%;
   }
 
@@ -63,11 +63,11 @@ export const Image = styled.div`
       font-size: 3rem;
       font-weight: 900;
 
-      @media screen and (max-device-width: 820px){
+      @media screen and (max-width: 820px){
         display: none;
       }
 
-      @media screen and (min-device-width: 601px)  and (max-device-width: 1100px){
+      @media screen and (min-width: 601px)  and (max-width: 1100px){
         font-size: 1.8rem;
       }
     }
@@ -75,7 +75,7 @@ export const Image = styled.div`
     span{
       font-size: 4rem;
 
-      @media screen and (min-device-width: 600px)  and (max-device-width: 1100px){
+      @media screen and (min-width: 600px)  and (max-width: 1100px){
         font-size: 2.2rem;
       }
     }

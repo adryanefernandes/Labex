@@ -66,7 +66,7 @@ function TripDetailsPage() {
   })
 
   const approved = tripDetails.trip && tripDetails.trip.approved.map((candidate) => {
-    return <p>{candidate.name}</p>
+    return <p id='candidateName' key={candidate.id}>{candidate.name}</p>
   })
 
   return (
@@ -101,12 +101,18 @@ function TripDetailsPage() {
 
           <CardApproved>
             <h3>Aprovados</h3>
-            {approved}
+
+            {approved.length !== 0 ? approved :
+              <p className="EmptyList">Lista vazia</p>
+            }
           </CardApproved>
 
           <CardCandidates>
             <h3>Candidatos</h3>
-            {candidates}
+
+            {candidates.length !== 0 ? candidates :
+              <p className="EmptyList">Lista vazia</p>
+            }
           </CardCandidates>
         </main>
         :

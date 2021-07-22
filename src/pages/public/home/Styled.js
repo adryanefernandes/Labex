@@ -22,11 +22,11 @@ export const Tittle = styled.h1 `
   text-align: center;
 
 
-  @media screen and (max-device-width: 420px){
+  @media screen and (max-width: 420px){
     font-size: 2.5rem;
   }
 
-  @media screen and (min-device-width: 421px) and (max-device-width: 960px){
+  @media screen and (min-width: 421px) and (max-width: 960px){
     font-size: 3rem;
   }
 `

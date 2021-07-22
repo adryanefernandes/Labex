@@ -10,7 +10,7 @@ export const Container = styled.footer `
     grid-column: 1 / -1;
 
     p{
-      @media screen and (max-device-width: 420px){
+      @media screen and (max-width: 420px){
         font-size: .8rem;
       }
     }
