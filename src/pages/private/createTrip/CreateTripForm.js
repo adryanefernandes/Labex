@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import useForm from '../../../hooks/useForm'
 import createTrip from '../../../requests/createTrip'
@@ -7,8 +8,13 @@ import TextAreaPattern from '../../../components/form/TextAreaPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
 import { ButtonGroup, Form } from './Styled'
 import { currentDate } from '../../../utils/currentDate'
+import { MessageSucessBox } from '../../../components/messageBox/sucess/MessageSucessBox'
 
 function CreateTripForm() {
+  //Feedback
+  const [isSucess, setIsSucess] = useState(false)
+
+  //Form
   const history = useHistory()
 
   const initialState = {
@@ -23,7 +29,7 @@ function CreateTripForm() {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    createTrip(form)
+    createTrip(form, setIsSucess)
     resetForm()
   }
 
@@ -80,6 +86,12 @@ function CreateTripForm() {
         onChange={handleInput}
         type={'number'}
       />
+
+      {isSucess && <MessageSucessBox
+        message={"Viagem cadastrada com sucesso"}
+        closeMessage={() => setIsSucess(false)}
+      />}
+
       <ButtonGroup>
         <button
           type='submit'

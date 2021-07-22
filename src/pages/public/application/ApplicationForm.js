@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import useRequestData from '../../../hooks/useRequestData'
 import { useHistory } from 'react-router-dom'
 import applyToTrip from '../../../requests/applyToTrip'
@@ -8,8 +9,13 @@ import TextAreaPattern from '../../../components/form/TextAreaPattern'
 import SelectPattern from '../../../components/form/SelectPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
 import { Form, ButtonGroup } from './Styled'
+import { MessageSucessBox } from '../../../components/messageBox/sucess/MessageSucessBox'
 
 function ApplicationForm() {
+  //Feedback
+  const [isSucess, setIsSucess] = useState(false)
+
+  //Form
   const initialState = {
     name: '',
     age: '',
@@ -19,6 +25,7 @@ function ApplicationForm() {
     trip: ''
   }
   const [form, handleInput, resetForm] = useForm(initialState)
+
 
   const history = useHistory()
   const tripsList = useRequestData('/trips', {})
@@ -31,7 +38,7 @@ function ApplicationForm() {
     event.preventDefault()
 
     const id = form.trip
-    applyToTrip(id, form)
+    applyToTrip(id, form, setIsSucess)
     resetForm()
   }
 
@@ -44,8 +51,6 @@ function ApplicationForm() {
         value={form.name}
         onChange={handleInput}
         type={'text'}
-        pattern={'(.*[a-z]){3}'}
-        title="Nome deve ter no mínimo 3 letras"
       />
       <InputPattern
         label={'Idade'}
@@ -64,7 +69,6 @@ function ApplicationForm() {
         value={form.profession}
         onChange={handleInput}
         minlength={5}
-        title="Nome deve ter no mínimo 5 caracteres"
       />
       <InputPattern
         label={'País'}
@@ -72,8 +76,6 @@ function ApplicationForm() {
         placeholder={'Brasil'}
         value={form.country}
         onChange={handleInput}
-        pattern={'(.*[a-z]){3}'}
-        title="Nome deve ter no mínimo 3 letras"
       />
       <TextAreaPattern
         label={'Motivo'}
@@ -82,7 +84,6 @@ function ApplicationForm() {
         value={form.applicationText}
         onChange={handleInput}
         minlength={30}
-        title="Nome deve ter no mínimo 3 letras"
       />
       <SelectPattern
         label={'Viagens'}
@@ -91,6 +92,11 @@ function ApplicationForm() {
         onChange={handleInput}
         options={selectTrips}
       />
+
+      {isSucess && <MessageSucessBox
+        message={"Sua candidatura foi aplicada com sucesso"}
+        closeMessage={() => setIsSucess(false)}
+      />}
 
       <ButtonGroup>
         <button id="sendButton">Enviar</button>

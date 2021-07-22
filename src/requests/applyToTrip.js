@@ -1,12 +1,14 @@
 import axios from "axios"
 import { urlApi } from "../apiConfig/axiosConfig"
 
-function applyToTrip(id, body){
+function applyToTrip(id, body, setIsSucess) {
     axios.post(`${urlApi}/trips/${id}/apply`, body)
-    .then((res) => {
-        alert('cadastrada')
-    })
-    .catch((err) => console.log(err))
+        .then(() => {
+            setIsSucess(true)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
 export default applyToTrip

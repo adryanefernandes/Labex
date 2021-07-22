@@ -5,13 +5,18 @@ import login from '../../../requests/login'
 
 import InputPattern from '../../../components/form/InputPattern'
 import ButtonPattern from '../../../components/ButtonPattern'
-import { ButtonSend } from '../../../styles/component/ButtonSendStyles'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { IconButton, InputGroup, InputRightElement } from "@chakra-ui/react"
 import { Label } from '../../../styles/component/LabelStyles'
+import { MessageErrorBox } from '../../../components/messageBox/error/MessageErrorBox'
 import { ButtonGroup, Form } from './Styled'
 
 function LoginPage() {
+  //Feedback
+  const [message, setMessage] = useState('')
+  const [isError, setIsError] = useState('')
+
+  //Form
   const history = useHistory()
 
   const initialState = {
@@ -22,7 +27,7 @@ function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    login(history, form)
+    login(history, form, setMessage, setIsError)
   }
 
   const [show, setShow] = useState(false)
@@ -67,8 +72,14 @@ function LoginPage() {
           />
         </InputRightElement>
       </InputGroup>
+
+            {isError && <MessageErrorBox 
+              message={message}
+              closeMessage={() => setIsError(false)}
+            />}
+
       <ButtonGroup>
-        <ButtonSend>Entrar</ButtonSend>
+        <button id="sendButton" type='submit'>Entrar</button>
         <ButtonPattern
           onClick={() => history.push('/')}
           name={'Voltar'}
