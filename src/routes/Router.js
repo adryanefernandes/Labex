@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import HomePage from '../pages/public/HomePage'
-import ListTripsPage from '../pages/public/ListTripsPage'
-import ApplicationFormPage from '../pages/public/ApplicationFormPage'
-import LoginPage from '../pages/public/LoginPage'
-import AdminHomePage from '../pages/private/AdminHomePage'
-import CreateTripPage from '../pages/private/CreateTripPage'
-import TripDetailsPage from '../pages/private/TripDetailsPage'
-import Error from '../pages/Error'
+
+import HomePage from '../pages/public/home/HomePage'
+import ListTripsPage from '../pages/public/listTrips/ListTripsPage'
+import ApplicationFormPage from '../pages/public/application/ApplicationPage'
+import LoginPage from '../pages/public/login/LoginPage'
+import ErrorPage from '../pages/public/error/ErrorPage'
+
+import AdminHomePage from '../pages/private/adminHome/AdminHomePage'
+import CreateTripPage from '../pages/private/createTrip/CreateTripPage'
+import TripDetailsPage from '../pages/private/tripDetails/TripDetailsPage'
 
 function RouterPage() {
   return (
@@ -41,7 +43,7 @@ function RouterPage() {
         </Route>
 
         <Route>
-          <Error />
+          <ErrorPage />
         </Route>
       </Switch>
     </BrowserRouter>
