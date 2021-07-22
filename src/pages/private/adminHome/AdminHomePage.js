@@ -40,6 +40,7 @@ function AdminHomePage() {
         <p onClick={() => goToTripDatailsPage(history, trip.id)}>{trip.name}</p>
 
         <IconButton
+          bg={'#F0EBE1'}
           onClick={() => openModal(trip.id)}
           icon={<DeleteIcon />} />
       </Trip>

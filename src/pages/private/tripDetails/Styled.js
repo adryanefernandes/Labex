@@ -91,6 +91,7 @@ export const CardCandidates = styled(Card)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: .25fr repeat(min(1), 2fr);
+  gap: 1rem;
 
   overflow-y: auto;
 
