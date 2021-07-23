@@ -22,7 +22,7 @@ function AdminHomePage() {
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [tripIdToDelete, setTripIdToDelete] = useState('')
-  const [tripWasDeleted, setTripWasDeleted] = useState(true)
+  const [tripWasDeleted, setTripWasDeleted] = useState(false)
 
   const history = useHistory()
   const tripsList = useRequestDataAuth('/trips', {})

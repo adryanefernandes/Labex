@@ -1,8 +1,12 @@
 import axios from 'axios'
-import { urlApi, headersConfig } from '../apiConfig/axiosConfig'
+import { urlApi } from '../apiConfig/axiosConfig'
 
 function createTrip(body, setIsSucess) {
-    axios.post(`${urlApi}/trips`, body, headersConfig)
+    axios.post(`${urlApi}/trips`, body, {
+        headers: {
+            auth: window.localStorage.getItem('token')
+        }
+      })
         .then((res) => {
             setIsSucess(true)
         }).catch((err) => {

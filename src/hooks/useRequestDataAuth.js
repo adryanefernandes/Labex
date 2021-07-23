@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { urlApi, token } from '../apiConfig/axiosConfig'
+import { urlApi } from '../apiConfig/axiosConfig'
 
 const useRequestDataAuth = (urlFinal, initialState) => {
     const [data, setData] = useState(initialState)
@@ -8,9 +8,9 @@ const useRequestDataAuth = (urlFinal, initialState) => {
     useEffect(() => {
         axios.get(`${urlApi}${urlFinal}`, {
             headers: {
-                auth: token
+                auth: window.localStorage.getItem('token')
             }
-        })
+          })
             .then((res) => setData(res.data))
             .catch((err) => console.log(err))
     }, [urlFinal, data])
