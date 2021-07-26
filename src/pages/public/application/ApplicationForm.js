@@ -47,7 +47,6 @@ function ApplicationForm() {
       <InputPattern
         label={'Nome'}
         name={'name'}
-        placeholder={'Aline Moraes'}
         value={form.name}
         onChange={handleInput}
         type={'text'}
@@ -55,7 +54,6 @@ function ApplicationForm() {
       <InputPattern
         label={'Idade'}
         name={'age'}
-        placeholder={'18'}
         value={form.age}
         onChange={handleInput}
         type={'number'}
@@ -65,7 +63,6 @@ function ApplicationForm() {
       <InputPattern
         label={'Profissão'}
         name={'profession'}
-        placeholder={'Médico'}
         value={form.profession}
         onChange={handleInput}
         minlength={5}
@@ -73,14 +70,12 @@ function ApplicationForm() {
       <InputPattern
         label={'País'}
         name={'country'}
-        placeholder={'Brasil'}
         value={form.country}
         onChange={handleInput}
       />
       <TextAreaPattern
         label={'Motivo'}
         name={'applicationText'}
-        placeholder={'Gosto do espaço'}
         value={form.applicationText}
         onChange={handleInput}
         minlength={30}

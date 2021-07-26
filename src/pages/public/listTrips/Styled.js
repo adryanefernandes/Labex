@@ -6,9 +6,7 @@ export const Container = styled.main`
   flex-direction: column;
 
   main{
-    @media screen and (max-width: 1100px){
-      margin: 0 1rem;
-    }
+    margin: 0 1rem;
 
     @media screen and (min-width: 1101px){
       margin: 0 5rem;

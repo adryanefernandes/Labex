@@ -42,7 +42,6 @@ function CreateTripForm() {
     <Form onSubmit={handleSubmit}>
       <InputPattern
         label={'Nome'}
-        placeholder={'Viagem a marte'}
         name={'name'}
         value={form.name}
         onChange={handleInput}
@@ -60,7 +59,6 @@ function CreateTripForm() {
       />
       <InputPattern
         label={'Data'}
-        placeholder='Data'
         name={'date'}
         value={form.date}
         onChange={handleInput}
@@ -69,7 +67,6 @@ function CreateTripForm() {
       />
       <TextAreaPattern
         label={'Descrição'}
-        placeholder='Descrição'
         name={'description'}
         value={form.description}
         onChange={handleInput}
@@ -79,7 +76,6 @@ function CreateTripForm() {
       />
       <InputPattern
         label={'Duração em dias'}
-        placeholder='Duração'
         name={'durationInDays'}
         min={50}
         value={form.durationInDays}
