@@ -45,7 +45,7 @@ function ApplicationForm() {
   return (
     <Form onSubmit={submitForm}>
       <InputPattern
-        label={'Nome'}
+        label={'Nome e sobrenome'}
         name={'name'}
         value={form.name}
         onChange={handleInput}

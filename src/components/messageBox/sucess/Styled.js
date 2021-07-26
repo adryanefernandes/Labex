@@ -11,8 +11,17 @@ export const Container = styled.div`
 
   #closeIcon {
     position: relative;
-    right: -1.2rem;
+    right: -.2rem;
     top: -.7rem;
+
+    @media screen and (min-width: 426px){
+      right: -.8rem;
+    }
+
+    @media screen and (min-width: 600px){
+      right: -.5rem;
+      top: -.5rem;
+    }
     
     button {
       cursor: pointer;
