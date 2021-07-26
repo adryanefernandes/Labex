@@ -6,9 +6,7 @@ export const Container = styled.main`
   flex-direction: column;
 
   main{
-    @media screen and (max-width: 1100px){
-      margin: 0 1rem;
-    }
+    margin: 0 1rem;
 
     @media screen and (min-width: 1101px){
       margin: 0 5rem;
@@ -49,8 +47,8 @@ export const ButtonGroup = styled.div`
 
 export const ContainerCards = styled.section`
   display: grid;
-  grid-template-rows: repeat(min(1), 1fr);
-  min-height: 85vh;
+  grid-template-rows: repeat(3, 10rem);
+  min-height: 68vh;
 
   gap: 1rem;
   margin-top: 1rem;
