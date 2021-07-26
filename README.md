@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src='./src/assets/logoRed.png' width="180px" />
+</div>
+  
+<div align="center">
+  <h1>Se candidate a viagens espaciais 🚀</h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center" >
+  <a href="#-sobre-a-aplica%C3%A7%C3%A3o"> Sobre </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-conteúdos-aplicados"> Conteúdos aplicados</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-suporte"> Suporte </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licen%C3%A7a">Licença</a>
+</p>
 
-## Available Scripts
+<p align="center">
+  <a href="https://github.com/adryanefernandes" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=author&message=adryanefernandes&color=B0283E&labelColor=DD6847" alt="Github"> 
+  </a>
+  <img src="https://img.shields.io/github/stars/adryanefernandes/Labex?color=B0283E&labelColor=DD6847" alt="Stars">
+  <img src="https://img.shields.io/github/last-commit/adryanefernandes/Labex?color=B0283E&labelColor=DD6847" alt="Commits">
+  <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=B0283E&labelColor=DD6847" alt="License">
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
+ ## 📌 Sobre a aplicação
+A **LabeX** é uma aplicação para usuários se candidatarem a viagens espaciais, com uma área para o administrador criar e deletar viagens, e de aprovar ou reprovar candidatos. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Aplicação construida para fins educacionais, essa foi uma das primeiras aplicações que criei com React.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 💻 Deploy
+O deploy de aplicação pode ser consultado nesse link
 
-### `npm test`
+## ⚙ Tecnologias
+- ReactJS
+- HTML5
+- CSS3
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📝 Conteúdos aplicados
+- [X] **create-react-app**
+- [X] **SPA (Single Page Application)**
+- [X] **Componentes em React**
+- [X] **Context API**
+- [X] **Styled-components**
+- [X] **Chackra-UI**
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🥳 Suporte
+Se esse projeto te ajudou de alguma forma, deixe uma ⭐️!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📝 Licença
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+<blockquote>
+    Feito por Adryane Cristine Soares Fernandes 🪐
+</blockquote>
