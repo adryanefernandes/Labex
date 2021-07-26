@@ -30,7 +30,12 @@ A **LabeX** é uma aplicação para usuários se candidatarem a viagens espaciai
 Aplicação construida para fins educacionais, essa foi uma das primeiras aplicações que criei com React.
 
 ### 💻 Deploy
-O deploy de aplicação pode ser consultado nesse link
+O deploy de aplicação pode ser consultado nesse link:
+https://labex.vercel.app/
+
+<br>
+<b> Para acessar a área de admin, use <s>com sabedoria</s>:</b>
+<p>Email: admin@email.com.br / Senha: 123456</p>
 
 ## ⚙ Tecnologias
 - ReactJS
